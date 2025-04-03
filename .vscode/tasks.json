@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build project",
+        "type": "shell",
+        "command": "clang++",
+        "args": [
+            "-std=c++17",
+            "-I", "include",
+            "src/*.cpp",
+            "-o", "build/toydb"
+        ],
+        "group": "build",
+        "problemMatcher": ["$gcc"]
+      }
+    ]
+  }
+  
