@@ -4,6 +4,7 @@
 #include <vector>
 #include <tuple>
 #include "mvcc_manager.h"
+#include "transaction_manager.h"
 
 // Each entry has multiple versions: (value, version_lsn, tid)
 typedef std::tuple<std::string, int, int> VersionedValue; // value, lsn, tid
@@ -20,6 +21,9 @@ private:
     MVCCManager* mvcc = nullptr;
 
 public:
+    void set_transaction_manager(TransactionManager* txn_mgr);
+    TransactionManager* txn_mgr = nullptr;
+
     Page& get_page(int page_id);
 
     void apply_update(int page_id, const std::string& key, const std::string& value, int lsn, int tid);

@@ -2,6 +2,7 @@
 #pragma once
 #include <unordered_map>
 #include <set>
+#include "lock_manager.h"
 
 enum TxnState {
     ACTIVE,
@@ -16,6 +17,7 @@ private:
     std::unordered_map<int, int> last_lsn_table;
 
 public:
+    LockManager lock_manager;
     int begin_transaction();
     void commit_transaction(int tid);
     void abort_transaction(int tid);

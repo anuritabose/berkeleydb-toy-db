@@ -1,0 +1,13 @@
+load_size,workload_type,txns_per_sec
+500,write-heavy,23809.52
+500,read-heavy,23809.52
+500,balanced,22727.27
+1000,write-heavy,35714.28
+1000,read-heavy,47619.04
+1000,balanced,32258.06
+5000,write-heavy,217391.30
+5000,read-heavy,217391.30
+5000,balanced,208333.33
+10000,write-heavy,454545.45
+10000,read-heavy,454545.45
+10000,balanced,454545.45
